@@ -6,6 +6,88 @@ Inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn)
 # Requirements
 - [Tensorflow](http://www.tensorflow.org)
 
+# How to use
+
+1. Install pip (or pip3 for python3) if it is not already installed
+
+   ```shell
+   # Ubuntu/Linux 64-bit
+   $ sudo apt-get install python-pip python-dev
+
+   # Mac OS X
+   $ sudo easy_install pip
+   $ sudo easy_install --upgrade six
+   ```
+
+   ​
+
+2. Install Tensorflow
+
+   * Select the correct binary to install
+
+     ```shell
+     # Ubuntu/Linux 64-bit, CPU only, Python 2.7
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl
+
+     # Ubuntu/Linux 64-bit, GPU enabled, Python 2.7
+     # Requires CUDA toolkit 7.5 and CuDNN v4. For other versions, see "Install from sources" below.
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl
+
+     # Mac OS X, CPU only, Python 2.7:
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0rc0-py2-none-any.whl
+
+     # Mac OS X, GPU enabled, Python 2.7:
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0rc0-py2-none-any.whl
+
+     # Ubuntu/Linux 64-bit, CPU only, Python 3.4
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0rc0-cp34-cp34m-linux_x86_64.whl
+
+     # Ubuntu/Linux 64-bit, GPU enabled, Python 3.4
+     # Requires CUDA toolkit 7.5 and CuDNN v4. For other versions, see "Install from sources" below.
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp34-cp34m-linux_x86_64.whl
+
+     # Ubuntu/Linux 64-bit, CPU only, Python 3.5
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0rc0-cp35-cp35m-linux_x86_64.whl
+
+     # Ubuntu/Linux 64-bit, GPU enabled, Python 3.5
+     # Requires CUDA toolkit 7.5 and CuDNN v4. For other versions, see "Install from sources" below.
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp35-cp35m-linux_x86_64.whl
+
+     # Mac OS X, CPU only, Python 3.4 or 3.5:
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0rc0-py3-none-any.whl
+
+     # Mac OS X, GPU enabled, Python 3.4 or 3.5:
+     $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0rc0-py3-none-any.whl
+     ```
+
+     ​
+
+   * Install TensorFlow
+
+     ```shell
+     # Python 2
+     $ sudo pip install --upgrade $TF_BINARY_URL
+
+     # Python 3
+     $ sudo pip3 install --upgrade $TF_BINARY_URL
+     ```
+
+     ​
+
+3. Prepare train text
+
+   Put the train text `input.txt`  in the `data\tinyshakespeare` folder.
+
+   ​
+
+4. Train model
+
+   `--rnn_size=300 --model=gru --num_layers=2` maybe can get the better model.
+
+5. Sample
+
+   ​
+
 # Basic Usage
 To train with default parameters on the tinyshakespeare corpus, run `python train.py`.
 
